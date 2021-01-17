@@ -6,11 +6,6 @@ import Error from '../Interface/Error';
 import Loading from '../Interface/Loading';
 import styles from './FeedPhotos.module.css';
 
-
-
-
-
-
 const FeedPhotos = ({setModalPhoto}) => {
 
     const { data, loading, error, request } = useFetch();
