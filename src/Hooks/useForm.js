@@ -4,8 +4,18 @@ const types = {
     email: {
         regex: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         message: 'Please insert a valid email',
-    }
-}
+    },
+
+    password: {
+        regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/,
+        message: 'Minimum requirements: 6 characters, 1 upercase, 1 lowercase and 1 number.',
+    },
+
+    number: {
+        regex: /^\d+$/,
+        message: 'Please use only number',
+    },
+};
 
 
 const useForm = (type) => {
