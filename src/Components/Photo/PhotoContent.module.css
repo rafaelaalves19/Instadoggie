@@ -61,7 +61,31 @@
     width: 16px;
     height: 10px;
     margin-right: 0.5rem;
-    background: url('../../Assets/views-black.svg');
+    background: url('../../Assets/visualizacao-black.svg');
+}
+
+.attributes {
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.attributes li {
+    margin-right: 2rem;
+}
+
+.attributes li::before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 3px;
+    width: 2px;
+    background: #333;
+    margin-top: 5px;
 }
   
   
