@@ -26,10 +26,11 @@ const useFetch = () => {
 
   return {
     data,
-    loading,
     error,
+    loading,
     request,
   };
 };
 
 export default useFetch;
+
