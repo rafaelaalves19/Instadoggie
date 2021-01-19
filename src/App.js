@@ -14,10 +14,11 @@ import UserProfile from './Components/User/UserProfile';
 //building my app body
 function App() {
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         <UserStorage>
           <Header />
+          <main className="AppBody">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
@@ -25,6 +26,7 @@ function App() {
             <Route path="foto/:id" element={<Photo />} />
             <Route path="profile/:user" element={<UserProfile />} />
           </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
