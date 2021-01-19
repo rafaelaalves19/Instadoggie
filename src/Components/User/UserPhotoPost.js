@@ -33,7 +33,7 @@ const UserPhotoPost = () => {
         formData.append('name', name.value);
         formData.append('weight', weight.value);
         formData.append('age', age.value);
-        formData.append('subtitle', name.subtitle);
+        formData.append('subtitle', subtitle.value);
 
         const token = window.localStorage.getItem('token');
         const { url, options } = PHOTO_POST(formData, token);

@@ -20,7 +20,7 @@ function App() {
           <Header />
           <main className="AppBody">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/*" element={<Home />} />
             <Route path="login/*" element={<Login />} />
             <RouteProtection path="account/*" element={<User />} />
             <Route path="foto/:id" element={<Photo />} />
