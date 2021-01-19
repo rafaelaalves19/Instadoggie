@@ -5,6 +5,7 @@ import { PHOTO_GET } from '../../Api';
 import Error from '../Interface/Error';
 import Loading from '../Interface/Loading';
 import PhotoContent from './PhotoContent';
+import Head from '../Interface/Head';
 
 
 const Photo = () => {
@@ -19,9 +20,12 @@ const Photo = () => {
     if (error) return <Error error={error} />;
     if (loading) return <Loading />;
     if (data) 
+
+
     return (
         <section className="container mainContainer">
-        <PhotoContent single={true} data={data}/>
+            <Head title={data.photo.title} />
+            <PhotoContent single={true} data={data}/>
         </section>
     );
     else return null;
