@@ -18,6 +18,12 @@ const UserHeader = () => {
       case '/account/statistics':
         setTitle('Statistics');
         break;
+      case '/account/playdate':
+        setTitle('PlayDate');
+        break;
+      case '/account/schedule':
+        setTitle('New PlayDate');
+        break;
       default:
         setTitle('My account');
     }

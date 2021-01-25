@@ -1,4 +1,4 @@
-export const API_URL = 'http://dogsapi.test/json';
+export const API_URL = 'http://localhost/json';
 
 export function TOKEN_POST(body) {
     return {
@@ -47,6 +47,55 @@ export function USER_POST(body) {
         },
         body: JSON.stringify(body),
       },
+    };
+}
+
+export function EVENT_POST(formData, token) {
+    return {
+        url: API_URL + '/api/event',
+        options: {
+            method: 'POST',
+            headers: {
+                Authorization: 'Bearer ' + token,
+            },
+            body: formData,
+        },
+    };
+}
+
+export function EVENT_PUT(formData, token) {
+    return {
+        url: API_URL + '/api/event',
+        options: {
+            method: 'PUT',
+            headers: {
+                Authorization: 'Bearer ' + token,
+            },
+            body: formData,
+        },
+    };
+}
+
+
+export function EVENT_GET({page, total, user}) {
+    return {
+        url: `${API_URL}/api/event/?_page=${page}&_total=${total}&_user=${user}`,
+        options: {
+            method: 'GET',
+            cache: 'no-store'
+        },
+    };
+}
+
+export function EVENT_DELETE(id) {
+    return {
+        url: `${API_URL}/api/event/${id}`,
+        options: {
+            method: 'DELETE',
+            headers: {
+                Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+            },
+        },
     };
 }
 

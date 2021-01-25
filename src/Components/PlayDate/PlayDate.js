@@ -1,11 +1,13 @@
 import React from 'react';
-import FeedModal from './FeedModal';
-import FeedPhotos from './FeedPhotos';
+import Head from '../Interface/Head';
+import PlayDateCard from './PlayDateCard';
+import { NavLink } from 'react-router-dom';
+import styles from './PlayDate.module.css';
 
-const Feed = ({user}) => {
+const PlayDate = () => {
 
-    const [modalPhoto, setModalPhoto] = React.useState(null);
     const [pages, setPages] = React.useState([1]);
+    
     const [infinite, setInfinite] = React.useState(true);
 
     React.useEffect(() => {
@@ -32,23 +34,27 @@ const Feed = ({user}) => {
         };
     }, [infinite]);
 
+    return ( 
+        <section className={`${styles.playdate} animeLeft`}>
+            <Head title="PayDate" />
 
-    return (
-        <div>
-            {modalPhoto && (
-                <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />
-            )}
             {pages.map((page) => (
-                <FeedPhotos
+                <PlayDateCard
                     key={page}
-                    user={user}
                     page={page}
-                    setModalPhoto={setModalPhoto}
                     setInfinite={setInfinite}
                 />
             ))}
-        </div>
-    );
-};
 
-export default Feed;
+            <nav className={styles.createButtonWrapper}>
+                <h2 className={styles.subtitle}>Create your new PlayDate</h2>
+                <NavLink className={styles.createButton} to="/account/schedule">
+                    <span className={styles.createIcon}>+</span><span>Click here</span>
+                </NavLink>
+            </nav>
+        </section>
+    );
+
+}
+
+export default PlayDate;

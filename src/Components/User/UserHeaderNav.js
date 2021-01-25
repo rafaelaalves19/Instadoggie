@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import {ReactComponent as Myphotos} from '../../Assets/feed.svg';
-import {ReactComponent as Statistics} from '../../Assets/statistics.svg';
 import {ReactComponent as Postphoto} from '../../Assets/add.svg';
 import {ReactComponent as Exit} from '../../Assets/exit.svg';
+import {ReactComponent as ScheduleIcon} from '../../Assets/timetable.svg';
 import styles from './UserHeaderNav.module.css';
 import useMedia from '../../Hooks/useMedia';
 
@@ -41,12 +41,12 @@ const UserHeaderNav = () => {
                 <Myphotos />
                 {mobile && 'My photos'}
             </NavLink>
-           
-            <NavLink to="/account/statistics" activeClassName={styles.active}>
-                <Statistics />
-                {mobile && 'Statistics'}
-            </NavLink>
             
+            <NavLink to="/account/playdate" activeClassName={styles.active}>
+                <ScheduleIcon />
+                {mobile && 'PlayDate'}
+            </NavLink>
+
             <NavLink to="/account/posting" activeClassName={styles.active}>
                 <Postphoto />
                 {mobile && 'Post photo'}

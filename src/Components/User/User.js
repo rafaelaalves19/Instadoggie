@@ -3,11 +3,10 @@ import UserHeader from './UserHeader';
 import { Routes, Route } from 'react-router-dom';
 import Feed from '../Feed/Feed';
 import UserPhotoPost from './UserPhotoPost';
-import UserStats from './UserStats';
 import { UserContext } from '../../UserContext';
 import Head from '../Interface/Head';
-
-
+import PlayDatePost from '../PlayDate/PlayDatePost';
+import PlayDate from '../PlayDate/PlayDate';
 
 const User = () => {
     const {data} = React.useContext(UserContext);
@@ -20,7 +19,8 @@ const User = () => {
             <Routes>
                 <Route path="/" element={<Feed user={data.id} />} />
                 <Route path="posting" element={<UserPhotoPost />} />
-                <Route path="statistics" element={<UserStats />} />
+                <Route path="schedule" element={<PlayDatePost />} />
+                <Route path="playdate" element={<PlayDate />} />
             </Routes>
 
 

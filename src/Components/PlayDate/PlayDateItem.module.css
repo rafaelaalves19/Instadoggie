@@ -1,0 +1,41 @@
+.content {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.paragraph {
+    font-size: 10px;
+    margin: 10px 0;
+}
+
+.description {
+    margin: 10px 0;
+    font-size: 10px;
+}
+
+.event {
+    flex-grow: 1;
+    border-radius: 0.2rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.active {
+    background: blue;
+}
+
+.titleWrap {
+    display: flex;
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    padding: 0 0 0 20px;
+    font-size: 12px;
+    margin: 0 10px 0 10px;
+}
+
+.deleteButton:hover {
+    color: #ffbb11;
+    cursor: pointer;
+}

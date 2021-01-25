@@ -1,0 +1,46 @@
+@media (max-width: 40rem) {
+    .playdate {
+        flex-direction: column;
+    }
+}
+
+.playdate {
+    display: flex;
+}
+
+.subtitle {
+    font-family: var(--type-second);
+    line-height: 1;
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+}
+
+.subtitle::after {
+    content: '';
+    display: block;
+    background: #ddd;
+    height: 0.5rem;
+    width: 3rem;
+    border-radius: 0.2rem;
+}
+
+.createButtonWrapper {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.createButton {
+    text-align: center;
+    padding: 10px;
+}
+
+.createButton:hover {
+    border: 1px solid #ffbb11;
+    color: #ffbb11;
+}
+
+.createIcon {
+    font-size: 25px;
+    margin-right: 10px;
+}

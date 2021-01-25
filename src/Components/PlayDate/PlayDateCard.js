@@ -1,24 +1,24 @@
 import React from 'react';
-import FeedPhotosItem from './FeedPhotosItem';
 import useFetch from '../../Hooks/useFetch';
-import { PHOTOS_GET } from '../../Api';
+import { EVENT_GET } from '../../Api';
 import Error from '../Interface/Error';
 import Loading from '../Interface/Loading';
-import styles from './FeedPhotos.module.css';
+import PlayDateItem from './PlayDateItem';
+import styles from './PlayDateCard.module.css';
 
-const FeedPhotos = ({ page, user, setModalPhoto, setInfinite}) => {
+const PlayDateCard = ({ page, user, setModalPhoto, setInfinite}) => {
     const { data, error, loading, request } = useFetch();
 
     React.useEffect(() => {
-        async function fetchPhotos() {
+        async function fetchEvent() {
             const total = 6;
-            const { url, options } = PHOTOS_GET({ page, total, user });
+            const { url, options } = EVENT_GET({ page, total, user });
             const { response, json } = await request(url, options);
             console.log('Request:', json);
             if(response && response.ok && !json && json.lenght < total) setInfinite
             (false)
         }
-        fetchPhotos();
+        fetchEvent();
     }, [request, user, page, setInfinite]);
 
 
@@ -27,12 +27,12 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite}) => {
     if (data)
 
     return (
-        <ul className={`${styles.feed} animeLeft`}>
-        {data.map((photo) => (
-                <FeedPhotosItem
-                key={photo.id} 
-                photo={photo}
-                setModalPhoto={setModalPhoto} 
+        <ul className={styles.playdate}>
+        {data.map((event) => (
+                <PlayDateItem 
+                    key={event.id} 
+                    event_post={event}
+                    setModalPhoto={setModalPhoto} 
                 />
             ))}
         </ul>
@@ -40,4 +40,4 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite}) => {
     else return null;
 };
 
-export default FeedPhotos;
+export default PlayDateCard;
