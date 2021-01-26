@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react'
 import Feed from './Feed/Feed';
 import Head from './Interface/Head';
 
 const Home = () => {
+
+    useEffect(() => {
+        const token = window.localStorage.getItem('token');
+        if(!token) {
+            window.location = "/login";
+        }
+    });
+    
     
     return (
         <section className="container mainContainer">

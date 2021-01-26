@@ -4,19 +4,21 @@
 }
 
 .paragraph {
-    font-size: 10px;
+    font-size: 15px;
     margin: 10px 0;
 }
 
 .description {
     margin: 10px 0;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .event {
     flex-grow: 1;
     border-radius: 0.2rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    font-size: 25px;
+
 }
 
 .active {

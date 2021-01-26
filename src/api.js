@@ -1,4 +1,4 @@
-export const API_URL = 'http://localhost/json';
+export const API_URL = 'http://instadoggieapi.local/json';
 
 export function TOKEN_POST(body) {
     return {
