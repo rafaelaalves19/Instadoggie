@@ -35,12 +35,5 @@
     font-size: 2rem;
 }
   
-.subtitle::after {
-    content: '';
-    display: block;
-    background: #ddd;
-    height: 0.5rem;
-    width: 3rem;
-    border-radius: 0.2rem;
-}
+
   
