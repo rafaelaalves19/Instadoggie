@@ -12,17 +12,17 @@ const UserHeader = () => {
   React.useEffect(() => {
     const { pathname } = location;
     switch (pathname) {
+      case '/': 
+        setTitle('Feed'); 
+        break;
       case '/account/posting':
         setTitle('Posting photo');
         break;
-      case '/account/statistics':
-        setTitle('Statistics');
-        break;
       case '/account/playdate':
-        setTitle('PlayDate');
+        setTitle('Play date');
         break;
       case '/account/schedule':
-        setTitle('New PlayDate');
+        setTitle('New play date');
         break;
       default:
         setTitle('My account');

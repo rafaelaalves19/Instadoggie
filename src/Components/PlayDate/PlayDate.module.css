@@ -15,14 +15,6 @@
     margin: 0 0 20px 0;
 }
 
-.subtitle::after {
-    content: '';
-    display: block;
-    background: #ddd;
-    height: 0.5rem;
-    width: 3rem;
-    border-radius: 0.2rem;
-}
 
 .createButtonWrapper {
     flex-grow: 1;

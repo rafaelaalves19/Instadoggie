@@ -6,6 +6,7 @@ import Loading from '../Interface/Loading';
 import PlayDateItem from './PlayDateItem';
 import styles from './PlayDateCard.module.css';
 
+// get the cards list
 const PlayDateCard = ({ page, user, setModalPhoto, setInfinite}) => {
     const { data, error, loading, request } = useFetch();
 

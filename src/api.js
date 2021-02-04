@@ -63,7 +63,7 @@ export function EVENT_POST(formData, token) {
     };
 }
 
-export function EVENT_PUT(formData, token) {
+export function EVENT_PUT(formData, token) { //pq event put??
     return {
         url: API_URL + '/api/event',
         options: {
@@ -186,15 +186,4 @@ export function PASSWORD_RESET(body) {
     };
 }
 
-export function STATS_GET() {
-    return {
-        url: API_URL + '/api/stats',
-        options: {
-            method: 'GET',
-            headers: {
-                Authorization: 'Bearer ' + window.localStorage.getItem('token'),
-            },
-        },
-    };
-}
 

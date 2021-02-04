@@ -42,9 +42,9 @@ const EventPost = () => {
 
     return ( 
         <section className={`${styles.event} animeLeft`}>
-            <Head title="Schedule a meeting" />
+            <Head title="Schedule a play date" />
             <form onSubmit={handleSubmit}>
-                <Input label="PlayDate name" type="text" name="name" {...name} />
+                <Input label="Play date name" type="text" name="name" {...name} />
                 <Input label="Description" type="text" name="description" {...description} />
                 <Input label="Local" type="text" name="local" {...local} />
                 <Input label="Date" type="date" name="date" {...date} />

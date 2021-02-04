@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
 
-
+/* this file sets the global styles  */
 * {
     box-sizing: border-box;
 }
@@ -9,6 +9,7 @@ body {
   padding-top: 4rem;
   margin: 0px;
   color: #333;
+  /*defining the fonts variables:  */
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: 'Spectral', georgia;
   font-family: var(--type-first);

@@ -1,7 +1,7 @@
 .login {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
+    min-height: 110vh;
     gap: 2rem;
 }
 

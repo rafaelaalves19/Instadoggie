@@ -1,6 +1,7 @@
 import React from 'react';
 import FeedModal from './FeedModal';
 import FeedPhotos from './FeedPhotos';
+import UserHeader from '../User/UserHeader';
 
 const Feed = ({user}) => {
 
@@ -38,6 +39,7 @@ const Feed = ({user}) => {
             {modalPhoto && (
                 <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />
             )}
+            {!user && <UserHeader />}
             {pages.map((page) => (
                 <FeedPhotos
                     key={page}

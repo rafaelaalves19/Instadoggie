@@ -44,7 +44,7 @@ const UserHeaderNav = () => {
             
             <NavLink to="/account/playdate" activeClassName={styles.active}>
                 <ScheduleIcon />
-                {mobile && 'PlayDate'}
+                {mobile && 'Play date'}
             </NavLink>
 
             <NavLink to="/account/posting" activeClassName={styles.active}>

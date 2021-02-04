@@ -4,12 +4,14 @@ import PlayDateCard from './PlayDateCard';
 import { NavLink } from 'react-router-dom';
 import styles from './PlayDate.module.css';
 
+//paginação - quantidade de cards
 const PlayDate = () => {
 
     const [pages, setPages] = React.useState([1]);
     
     const [infinite, setInfinite] = React.useState(true);
 
+    //render the infite scroll
     React.useEffect(() => {
         let wait = false;
         function infiniteScroll() {
@@ -36,8 +38,8 @@ const PlayDate = () => {
 
     return ( 
         <section className={`${styles.playdate} animeLeft`}>
-            <Head title="PayDate" />
-
+            <Head title="Play date" />
+            {/* map to list the array */}
             {pages.map((page) => (
                 <PlayDateCard
                     key={page}
@@ -47,7 +49,7 @@ const PlayDate = () => {
             ))}
 
             <nav className={styles.createButtonWrapper}>
-                <h2 className={styles.subtitle}>Create your new PlayDate</h2>
+                <h2 className={styles.subtitle}>Create your new play date</h2>
                 <NavLink className={styles.createButton} to="/account/schedule">
                     <span className={styles.createIcon}>+</span><span>Click here</span>
                 </NavLink>
